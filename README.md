@@ -20,7 +20,8 @@ docker run -it -v $(pwd):/app my_container_name
 # Start TDD -- this continouosly reruns tests as you develop
 make test
 
-#  Now modify a test in `/tests` or the example code in `/skeleton/core.py` to see the unit tests rerunning. Tada! TDD.
+# Now modify a test in `/tests` or the example code in `/skeleton/core.py`
+# to see the unit tests rerunning. Tada! TDD.
 ```
 
 #### Note about caches
@@ -48,7 +49,8 @@ make init   # installs dependencies
 # Start TDD -- this continouosly reruns tests as you develop
 make test
 
-# Now modify a test in `/tests` or the example code in `/skeleton/core.py` to see the unit tests rerunning. Tada! TDD.
+# Now modify a test in `/tests` or the example code in `/skeleton/core.py`
+# to see the unit tests rerunning. Tada! TDD.
 ```
 
 ## Contributing
