@@ -2,6 +2,8 @@
 
 A sample Python module skeleton used to make TDD Python more easy. Works in both Docker and Virtualenv.
 
+![Hey there, Developer](https://cdn.pixabay.com/photo/2016/08/01/14/55/skeleton-1561177_640.png)
+
 ## Usage -- Docker
 
 This sets up a dev environment inside of docker. Changes made on the host will be immediately reflected.
