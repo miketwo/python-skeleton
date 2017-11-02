@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-import skeleton
 import pytest
+import skeleton
 
 
 # Parameterized testing. Change the test cases to generate more.

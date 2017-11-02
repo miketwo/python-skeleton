@@ -3,7 +3,6 @@
 import unittest
 import skeleton
 
-
 class BasicTestSuite(unittest.TestCase):
     """Docs here."""
 
