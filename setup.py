@@ -53,7 +53,7 @@ setup(
     package_data=package_data,
     install_requires=requires,
     author=skeleton.__author__,
-    author_email='python@chrisstreeter.com',
+    author_email='miketwo@gmail.com',
     url='https://github.com/streeter/python-skeleton',
     license='MIT',
     classifiers=classifiers,

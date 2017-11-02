@@ -1,5 +1,8 @@
+.PHONY: init
 init:
 	pip install -r requirements.txt
 
+.PHONY: test
 test:
-	ptw -- -v -s
+	find . -name \*.pyc -delete
+	ptw -- -v -s --cache-clear
