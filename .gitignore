@@ -3,6 +3,15 @@
 # C extensions
 *.so
 
+# Virtual environments
+.venv/
+.uv-cache/
+
+# Tool caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
 # Packages
 *.egg
 *.egg-info

@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "python-skeleton"
+version = "0.0.1"
+description = "Skeleton package for Python modules."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Michael Ricks-Aherne", email = "miketwo@gmail.com" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8",
+  "pytest-watch>=4",
+  "ruff>=0.6",
+]
+
+[project.urls]
+Repository = "https://github.com/streeter/python-skeleton"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/skeleton"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.ruff.format]
+quote-style = "double"
