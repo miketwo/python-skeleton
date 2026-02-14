@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+source "$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd -P)/_common.sh"
+
+# Setup is for first-time initialization. For this repo, that is equivalent to bootstrap.
+sync_deps

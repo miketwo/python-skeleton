@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+source "$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd -P)/_common.sh"
+
+sync_deps
+
+uv run ruff format --check .
+uv run ruff check .
+uv run pytest -v -s --cache-clear "$@"

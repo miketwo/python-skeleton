@@ -1,6 +1,6 @@
 # Python Skeleton
 
-A sample Python module skeleton used to make TDD Python more easy. Works in both Docker and Virtualenv.
+A sample Python module skeleton with a modern `src/` layout, `uv` for env/package management, `pytest` for tests, and `ruff` for linting/formatting.
 
 ![Hey there, Developer](https://cdn.pixabay.com/photo/2016/08/01/14/55/skeleton-1561177_640.png)
 
@@ -19,10 +19,20 @@ cd python-skeleton
 docker build -t my_container_name .
 docker run -it -v $(pwd):/app my_container_name
 
-# Start TDD -- this continouosly reruns tests as you develop
-make test
+# Run tests
+./script/test
 
-# Now modify a test in `/tests` or the example code in `/skeleton/core.py`
+# Lint/format
+./script/lint
+./script/format
+
+# Watch tests (rerun automatically on changes)
+./script/test-watch
+
+# Console
+./script/console
+
+# Now modify a test in `/tests` or the example code in `/src/skeleton/core.py`
 # to see the unit tests rerunning. Tada! TDD.
 ```
 
@@ -32,26 +42,29 @@ Both python and pytest use caches to speed things up. If you are running the pro
  - Using the `--cache-clear` option in pytest or manually deleting `__pycache__`
 
 
-## Usage -- Virtualenv
+## Usage -- uv (recommended)
 
-This is a more traditional virtual environment setup.
-
-Pre-reqs: `virtualenvwrapper`. (Try `sudo pip install virtualenvwrapper` -- it might work.)
-
+Pre-reqs: `uv`
 
 ```
 # Download the repo
 git clone https://github.com/miketwo/python-skeleton.git
 cd python-skeleton
 
-# Create a virtual environment to work in
-mkvirtualenv PROGRAMNAME
-make init   # installs dependencies
+# Create a virtual environment and install dev deps
+./script/setup
 
-# Start TDD -- this continouosly reruns tests as you develop
-make test
+# Run tests
+./script/test
 
-# Now modify a test in `/tests` or the example code in `/skeleton/core.py`
+# Lint/format
+./script/lint
+./script/format
+
+# Watch tests (rerun automatically on changes)
+./script/test-watch
+
+# Now modify a test in `/tests` or the example code in `/src/skeleton/core.py`
 # to see the unit tests rerunning. Tada! TDD.
 ```
 

@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+source "$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd -P)/_common.sh"
+
+sync_deps
+# Default to fixing what we can; allow passing additional ruff args.
+uv run ruff check --fix . "$@"
+
+# Keep formatting aligned with lint auto-fixes (import sorting, etc.).
+uv run ruff format .

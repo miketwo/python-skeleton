@@ -12,5 +12,10 @@
 **/html/*
 **/__pycache__
 
+.venv/
+.uv-cache/
+.pytest_cache/
+.ruff_cache/
+
 # Compiled Documentation
 docs/_build
